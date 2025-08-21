@@ -1,0 +1,69 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "d36a22dd-0f1e-4627-b283-274771af295a",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "ModuleNotFoundError",
+     "evalue": "No module named 'kagglehub'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+      "\u001b[31mModuleNotFoundError\u001b[39m                       Traceback (most recent call last)",
+      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[1]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m \u001b[38;5;28;01mimport\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01mkagglehub\u001b[39;00m\n\u001b[32m      2\u001b[39m \u001b[38;5;28;01mimport\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01mpandas\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[38;5;28;01mas\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01mpd\u001b[39;00m\n\u001b[32m      3\u001b[39m \u001b[38;5;28;01mimport\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01mos\u001b[39;00m\n",
+      "\u001b[31mModuleNotFoundError\u001b[39m: No module named 'kagglehub'"
+     ]
+    }
+   ],
+   "source": [
+    "import kagglehub\n",
+    "import pandas as pd\n",
+    "import os\n",
+    "\n",
+    "# Download latest version of the dataset\n",
+    "path = kagglehub.dataset_download(\"architsharma01/loan-approval-prediction-dataset\")\n",
+    "\n",
+    "# Find CSV inside the downloaded path\n",
+    "csv_file = [f for f in os.listdir(path) if f.endswith(\".csv\")][0]\n",
+    "csv_path = os.path.join(path, csv_file)\n",
+    "\n",
+    "# Load with pandas\n",
+    "df = pd.read_csv(csv_path)\n",
+    "print(\"✅ Dataset loaded successfully\")\n",
+    "print(df.head())\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e4ec4e80-3352-43ee-b5ca-b9465477b4a4",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
