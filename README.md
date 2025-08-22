@@ -4,9 +4,10 @@
 
 An advanced machine learning system for automated loan approval decisions using premium banking data.
 
-![Loan Prediction](https://img.shields.io/badge/Accuracy-99.65%25-brightgreen)
-![Dataset](https://img.shields.io/badge/Dataset-4269_loans-blue)
-![Portfolio](https://img.shields.io/badge/Portfolio-₹30B+-gold)
+![Accuracy](https://img.shields.io/badge/Accuracy-99.65%25-brightgreen)
+![Dataset Size](https://img.shields.io/badge/Dataset-4269%20Loans-blue)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-Aug%202025-orange)
+![Python](https://img.shields.io/badge/Python-3.9+-yellow)
 
 ## Project Overview
 
@@ -29,5 +30,12 @@ Developed a Random Forest classifier that automates loan approval decisions with
 - **Feature Engineering**: Income ratios and asset calculations
 
 ## Quick Start
+
+## How to Run
+
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/Vedant0527/ML_HDFC_Loan_project.git
+   cd ML_HDFC_Loan_project
 
 ### Prerequisites
